@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
+const movieRoute = require("./routes/movies");
 
 dotenv.config();
 
@@ -20,7 +21,9 @@ app.use(express.json());
 // if you make any request take 'api/auth' endpoint route authRoute
 app.use("/api/auth", authRoute);
 // if you make any request take 'api/users' endpoint route usersRoute
-app.use("/api/users", usersRoute)
+app.use("/api/users", usersRoute);
+// if you make any request take 'api/movie' endpoint route movieRoute
+app.use("/api/movies", movieRoute);
 
 app.use("/api/welcome", (req,res) => {
     res.send("Welcome");
