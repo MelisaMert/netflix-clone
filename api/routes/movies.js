@@ -75,9 +75,8 @@ router.get("/", verify, async (req, res) => {
     }
 })
 
-
 // GET RANDOM
-// http://localhost:8080/api/movies/random?type="series"
+// http://localhost:8080/api/movies/random?type=series
 router.get("/random", async (req, res) => {
     const type = req.query.type;
     let movie;
