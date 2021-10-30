@@ -16,7 +16,7 @@ const Home = ({ type }) => {
                 `lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre: ""}`,
                 {
                     headers: {
-                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2MwMWZkY2MxYjI3ZjY4MWU1MGI1NSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNTU4MTI1OSwiZXhwIjoxNjM2MDEzMjU5fQ.JIheSVG2O8eb7KG4W1lhnd5SHKkc7nIn7Q4OTggSocQ"
+                        token: "token"
                     }
                 }
             );
