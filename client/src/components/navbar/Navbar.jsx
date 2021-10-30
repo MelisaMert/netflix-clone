@@ -1,8 +1,9 @@
 import './navbar.scss';
-import {useState} from 'react';
+import { useState } from 'react';
 import Search from '@material-ui/icons/Search';
 import Notifications from '@material-ui/icons/Notifications';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,16 +22,24 @@ const Navbar = () => {
                         alt=""
                     />
                     <span>Homepage</span>
-                    <span>Series</span>
-                    <span>Movies</span>
-                    <span>New and Popular</span>
-                    <span>My List</span>
+                    <Link to="/series" className="link">
+                        <span>Series</span>
+                    </Link>
+                    <Link to="/movies" className="link">
+                        <span>Movies</span>
+                    </Link>
+                    <Link to="/" className="link">
+                        <span>New and Popular</span>
+                    </Link>
+                    <Link to="/" className="link">
+                        <span>My List</span>
+                    </Link>
                 </div>
                 <div className="right">
                     <Search className="icon" />
                     <span>KID</span>
                     <Notifications className="icon" />
-                    <img src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""/>
+                    <img src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
                     <div className="profile">
                         <ArrowDropDown className="icon" />
                         <div className="options">
